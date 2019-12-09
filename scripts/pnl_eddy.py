@@ -1,18 +1,11 @@
 #!/usr/bin/env python
-
 from __future__ import print_function
-from os import getpid
-from util import logfmt, TemporaryDirectory, pjoin, FILEDIR, N_PROC, dirname
-from plumbum import local, cli, FG
-from plumbum.cmd import ls, flirt, fslmerge, tar, fslsplit
-import numpy as np
-import sys
-from multiprocessing import Pool
-from subprocess import check_call
-from conversion import read_bvecs, write_bvecs
+from util import N_PROC
+from plumbum import cli
+from plumbum.cmd import flirt
 
 import logging
-logger = logging.getLogger()
+from util import logfmt
 logging.basicConfig(level=logging.DEBUG, format=logfmt(__file__))
 
 def _Register_vol(volnii):
@@ -31,7 +24,23 @@ def _Register_vol(volnii):
     return volnii
 
 
-def work_flow(dwi, bvalFile, bvecFile, out, debug, overwrite, nproc):
+def work_flow(dwi, bvalFile, bvecFile, out, debug=False, overwrite=False, nproc=8):
+
+    from os import getpid
+    from util import TemporaryDirectory, pjoin, FILEDIR, dirname
+    from plumbum import local, FG
+    from plumbum.cmd import ls, fslmerge, tar, fslsplit
+    import numpy as np
+    import sys
+    from multiprocessing import Pool
+    from subprocess import check_call
+    from conversion import read_bvecs, write_bvecs
+    from pnl_eddy import _Register_vol
+    import logging
+
+    dwi = local.path(dwi)
+    bvalFile= local.path(bvalFile)
+    bvecFile= local.path(bvecFile)
 
     out = local.path(out)
     if out.exists():
@@ -123,7 +132,6 @@ def work_flow(dwi, bvalFile, bvecFile, out, debug, overwrite, nproc):
 
         if debug:
             tmpdir.copy(pjoin(dirname(out), "eddy-debug-" + str(getpid())))
-
 
     return (out._path + '.nii.gz', out._path + '.bval', out._path + '.bvec')
 

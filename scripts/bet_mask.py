@@ -2,10 +2,9 @@
 
 from plumbum.cmd import bet, fslroi
 from plumbum import cli, FG, local
-import os
 import numpy as np
 from conversion import read_bvals
-from util import BET_THRESHOLD, B0_THRESHOLD, load_nifti
+from util import BET_THRESHOLD, B0_THRESHOLD
 
 
 def bet_mask(imgPath, maskPath, dim, bvalFile= None, thr= BET_THRESHOLD):
@@ -37,6 +36,12 @@ def bet_mask(imgPath, maskPath, dim, bvalFile= None, thr= BET_THRESHOLD):
 
 def work_flow(img, bval_file, out, bet_threshold):
 
+    from util import load_nifti
+    from bet_mask import bet_mask
+    import os
+    from plumbum import local
+
+    img= local.path(img)
     prefix = img.name.split('.')[0]
     directory = img.parent
 

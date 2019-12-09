@@ -1,0 +1,924 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "Custom",
+        "function_wrappers"
+      ],
+      "title": {
+        "name": "function_wrappers.dwi_align",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function dwi_align",
+            "argument": {
+              "name": "function_wrappers.dwi_align",
+              "import": "sys.path.append('/home/tb571/Documents/pnlNipype/scripts')\nimport function_wrappers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, function_wrappers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "img_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "img_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bval_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bval_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bvec_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bvec_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_img",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_img"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_bval",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_bval"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_bvec",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_bvec"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "function_wrappers"
+      ],
+      "title": {
+        "name": "function_wrappers.dwi_bet_mask",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function dwi_bet_mask",
+            "argument": {
+              "name": "function_wrappers.dwi_bet_mask",
+              "import": "sys.path.append('/home/tb571/Documents/pnlNipype/scripts')\nimport function_wrappers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, function_wrappers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "img",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "img"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bval_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bval_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "out",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bet_threshold",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bet_threshold"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "dwi_mask",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dwi_mask"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "function_wrappers"
+      ],
+      "title": {
+        "name": "function_wrappers.inter_outputs",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function inter_outputs",
+            "argument": {
+              "name": "function_wrappers.inter_outputs",
+              "import": "sys.path.append('/home/tb571/Documents/pnlNipype/scripts')\nimport function_wrappers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, function_wrappers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "id",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "id"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "t1_align_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "t1_align_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "t2_align_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "t2_align_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "dwi_align_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dwi_align_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "t1_mabsmask_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "t1_mabsmask_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "t2_mabsmask_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "t2_mabsmask_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_bse_betmask_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_bse_betmask_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fs_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fs_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fs_in_eddy",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fs_in_eddy"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fs_in_epi",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fs_in_epi"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_bse_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_bse_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_bse_masked_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_bse_masked_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_epi_bse_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_epi_bse_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_epi_bse_masked_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_epi_bse_masked_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_epi_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_epi_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_tract_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_tract_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_epi_tract_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_epi_tract_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_fs2dwi_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_fs2dwi_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "epi_fs2dwi_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "epi_fs2dwi_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_wmql_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_wmql_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "eddy_wmqlqc_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "eddy_wmqlqc_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "epi_wmql_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "epi_wmql_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "epi_wmqlqc_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "epi_wmqlqc_dir"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "function_wrappers"
+      ],
+      "title": {
+        "name": "function_wrappers.pnl_eddy",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function pnl_eddy",
+            "argument": {
+              "name": "function_wrappers.pnl_eddy",
+              "import": "sys.path.append('/home/tb571/Documents/pnlNipype/scripts')\nimport function_wrappers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, function_wrappers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "dwi",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dwi"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bvalFile",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bvalFile"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bvecFile",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bvecFile"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "out",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "nproc",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "nproc"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_dwi",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_dwi"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_bval",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_bval"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_bvec",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_bvec"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "function_wrappers"
+      ],
+      "title": {
+        "name": "function_wrappers.ukf_tract",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function ukf_tract",
+            "argument": {
+              "name": "function_wrappers.ukf_tract",
+              "import": "sys.path.append('/home/tb571/Documents/pnlNipype/scripts')\nimport function_wrappers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, function_wrappers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "dwi",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dwi"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "dwimask",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dwimask"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bvalFile",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bvalFile"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bvecFile",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "bvecFile"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "out",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "givenParams",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "givenParams"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "tract_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "tract_file"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

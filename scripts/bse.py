@@ -1,15 +1,19 @@
 #!/usr/bin/env python
 
-from plumbum import cli, FG
-from plumbum.cmd import fslroi, ImageMath
-from conversion import read_bvals
-import os
-from util import load_nifti, save_nifti
-
-import numpy as np
+from plumbum import cli
 
 
 def work_flow(dwi, bval_file, out, b0_threshold, dwimask, minimum= False, average= False, all= False):
+
+    from plumbum import local, FG
+    from plumbum.cmd import fslroi, ImageMath
+    from conversion import read_bvals
+    import os
+    from util import load_nifti, save_nifti
+
+    import numpy as np
+
+    dwi= local.path(dwi)
 
     prefix = dwi.name.split('.')[0]
     directory = dwi.parent

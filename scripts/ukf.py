@@ -1,24 +1,35 @@
 #!/usr/bin/env python
 
 from __future__ import print_function
-from util import logfmt, TemporaryDirectory, save_nifti, load_nifti
-from plumbum import local, cli, FG
-from plumbum.cmd import UKFTractography
-
-from conversion import nhdr_write
 
 import logging
-logger = logging.getLogger()
+from util import logfmt
 logging.basicConfig(level=logging.DEBUG, format=logfmt(__file__))
-
+from plumbum import cli
 
 # default UKFTractography parameters
 ukfdefaults = ['--numTensor', 2, '--stoppingFA', 0.15, '--seedingThreshold', 0.4, '--Qm', 0.001, '--Ql', 70,
                '--Rs', 0.015, '--stepLength', 0.3, '--recordLength', 1.7, '--stoppingThreshold', 0.1,
                '--seedsPerVoxel', 1, '--recordTensors']
 
-
 def work_flow(dwi, dwimask, bvalFile, bvecFile, out, givenParams):
+
+    from plumbum import local, FG
+
+    from plumbum.cmd import UKFTractography
+    from conversion import nhdr_write
+    from util import TemporaryDirectory, save_nifti, load_nifti
+    import logging
+
+    dwi= local.path(dwi)
+    dwimask= local.path(dwimask)
+    bvalFile= local.path(bvalFile)
+    bvecFile= local.path(bvecFile)
+
+    # default UKFTractography parameters
+    ukfdefaults = ['--numTensor', 2, '--stoppingFA', 0.15, '--seedingThreshold', 0.18, '--Qm', 0.001, '--Ql', 70,
+                   '--Rs', 0.015, '--stepLength', 0.3, '--recordLength', 1.7, '--stoppingThreshold', 0.1,
+                   '--seedsPerVoxel', 10, '--recordTensors']
 
     with TemporaryDirectory() as tmpdir:
         tmpdir = local.path(tmpdir)
