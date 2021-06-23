@@ -529,9 +529,9 @@ Since this takes a long time, it is also available to be copied from the `Other`
 ## Diffusion Masking and Mask QC
 
 Just as we masked the structural image, we will now need to create a mask for our diffusion image. To do this, we first need to make a text file that contains a path to your dwi image. In your `dwi` directory, type `vim dwi.txt`. This will take you to a blank page. Press “i” to insert text and type your path to the dwi image: 
-```
-/data/pnl/home/<username>/Tutorial/PipelineTraining/rawdata/sub-sample/ses-1/dwi/sub-sample_ses-1_desc-UnXc_dwi.nii.gz
-```
+
+> /data/pnl/home/<username>/Tutorial/PipelineTraining/rawdata/sub-sample/ses-1/dwi/sub-sample_ses-1_desc-UnXc_dwi.nii.gz
+
 Now let’s return to the terminal: press esc colon wq (esc:wq) and this will save the text you’ve added to your text file.
 
 Now that we have our text file, make sure you’re in your `dwi` directory and enter:
